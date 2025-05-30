@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="p-6">
-      <h1 className="text-xl mb-4">Todo App</h1>
+      <h1 className="text-xl mb-4">Todo App [Updated]</h1>
 
       <div className="mb-4">
         <input
