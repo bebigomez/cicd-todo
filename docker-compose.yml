@@ -2,4 +2,14 @@ services:
   frontend:
     image: bebigomez/cicd-todo
     ports:
-      - "8080:80" 
+      - "8080:80"
+    restart: always
+    container_name: todo-app
+
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      -  WATCHTOWER_POLL_INTERVAL=30 # Poll every 60 seconds
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
